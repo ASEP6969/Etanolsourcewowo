@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - John Doe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- CV Content -->
+  <div class="max-w-4xl mx-auto my-10 bg-white shadow-lg rounded-lg p-8">
+    <div class="flex items-center space-x-6">
+      <img src="https://via.placeholder.com/100" alt="Avatar" class="w-24 h-24 rounded-full">
+      <div>
+        <h1 class="text-3xl font-bold">John Doe</h1>
+        <p class="text-gray-600">Full Stack Developer</p>
+      </div>
+    </div>
+    <div class="mt-6">
+      <h2 class="text-xl font-semibold border-b pb-2">Tentang Saya</h2>
+      <p class="mt-2 text-gray-700">Saya seorang developer berpengalaman... (isi sesuai data anda)</p>
+    </div>
+    <!-- Bisa tambah bagian pengalaman, pendidikan, skill, portfolio -->
+  </div>
 
+  <!-- Chat Widget -->
+  <div id="chat-widget" class="fixed bottom-4 right-4 z-50">
+    <button id="chat-toggle" class="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+      </svg>
+    </button>
+    <div id="chat-box" class="hidden w-80 h-96 bg-white border shadow-xl mt-2 rounded flex flex-col">
+      <div class="p-3 bg-blue-600 text-white font-semibold rounded-t">Live Chat</div>
+      <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-2"></div>
+      <div class="p-2 border-t flex">
+        <input type="text" id="chat-input" placeholder="Ketik pesan..." class="flex-1 border rounded px-2 py-1 text-sm">
+        <button id="send-btn" class="ml-2 bg-blue-600 text-white px-3 rounded text-sm">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@7.0.0/dist/browser/signalr.min.js"></script>
+  <script src="chat-widget.js"></script>
+</body>
+</html>
